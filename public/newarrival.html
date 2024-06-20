@@ -1,0 +1,587 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.4.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-straight/css/uicons-thin-straight.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.4.0/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet"
+        href="https://cdn-uicons.flaticon.com/2.4.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+
+    <link href="../src/output.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header class="bg-white transition-all duration-300">
+        <div class="grid grid-cols-2 gap-3 p-5 md:grid-cols-3 md:gap-0 lg:grid-cols-3">
+            <!-- Start Brand -->
+            <div class="">
+                <h1 class="">
+                    <span class="text-2xl font-bold text-gray-800 md:text-3xl">SME</span>
+                    <span class="text-lg font-semibold text-gray-500 md:text-xl">Myanmar</span>
+                </h1>
+            </div>
+            <!-- End Brand -->
+
+            <!-- Start Search Box For LG -->
+            <div class="hidden place-self-center md:block">
+                <form class="md:max-w-md lg:w-[400px]">
+                    <label for="default-search" class="sr-only mb-2 text-sm font-medium text-gray-900">Search</label>
+                    <div class="relative">
+                        <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
+                            <svg class="h-4 w-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                            </svg>
+                        </div>
+                        <input type="search" id="default-search"
+                            class="block w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-2 ps-10 text-sm text-gray-900 focus:border-gray-500 focus:outline-none focus:ring-gray-500"
+                            placeholder="Search" required />
+                    </div>
+                </form>
+            </div>
+            <!-- End Search Box For LG -->
+
+            <!-- Start Search Box For SM -->
+            <div class="relative col-span-2 row-start-2 md:hidden">
+                <div class="flex justify-between">
+                    <button id="sm-side-menu">
+                        <i
+                            class="fi fi-br-bars-sort font-bold text-gray-500 transition-all duration-300 hover:text-gray-800"></i>
+                    </button>
+                    <button id="sm-search-btn">
+                        <i
+                            class="fi fi-rs-search font-bold text-gray-700 transition-all duration-300 hover:text-gray-800"></i>
+                    </button>
+                </div>
+                <div id="sm-search"
+                    class="absolute inset-0 top-0 -z-20 flex items-center gap-3 opacity-0 transition-all duration-300">
+                    <form class="w-full">
+                        <label for="default-search"
+                            class="sr-only mb-2 text-sm font-medium text-gray-900">Search</label>
+                        <div class="relative">
+                            <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
+                                <svg class="h-4 w-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search"
+                                class="block w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-2 ps-10 text-sm text-gray-900 focus:border-gray-500 focus:outline-none focus:ring-gray-500"
+                                placeholder="Search" required />
+                        </div>
+                    </form>
+                    <button id="sm-search-btn-close" class="bg-white">
+                        <i
+                            class="fi fi-rs-cross font-bold text-gray-700 transition-all duration-300 hover:text-gray-800"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- End Search Box For SM -->
+
+            <!-- Start Social,Cart,Profile -->
+            <div class="flex items-center gap-5 place-self-end">
+                <div>
+                    <a class="flex text-2xl text-gray-800"><i
+                            class="fi fi-brands-facebook flex items-center justify-center"></i></a>
+                </div>
+                <div>
+                    <a class="flex text-2xl text-gray-800"><i
+                            class="fi fi-tr-cart-minus flex items-center justify-center"></i></a>
+                </div>
+                <div>
+                    <a class="block h-9 w-9 rounded-full border border-gray-900 p-2"><img src="../images/user.png"
+                            class="" /></a>
+                </div>
+            </div>
+            <!-- End Social,Cart,Profile -->
+        </div>
+
+        <!-- Start Nav Bar -->
+        <nav class="hidden gap-5 px-5 py-2 md:flex">
+            <a href="index.html"
+                class="relative font-quicksand font-semibold text-gray-600 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-0 after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">Home</a>
+            <a href="newarrival.html"
+                class="relative font-quicksand font-semibold text-gray-700 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-full after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">New
+                Arravials</a>
+            <a href="#"
+                class="relative font-quicksand font-semibold text-gray-600 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-0 after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">Men</a>
+            <a href="#"
+                class="relative font-quicksand font-semibold text-gray-600 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-0 after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">Women</a>
+
+            <div
+                class="group relative font-quicksand font-semibold text-gray-600 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-0 after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">
+                <a href="#">Kids</a>
+                <div
+                    class="absolute left-0 right-0 top-full z-20 mt-3 flex w-32 origin-top -translate-x-1/2 scale-y-0 flex-col gap-3 rounded-lg bg-gray-50 p-3 shadow-md duration-300 group-hover:scale-y-100">
+                    <a href="#">Boy</a>
+                    <a href="#">Girl</a>
+                </div>
+            </div>
+        </nav>
+        <!-- End Nav Bar -->
+
+        <!-- Start Side Bar -->
+        <div id="side-menu"
+            class="absolute inset-0 block h-screen w-0 overflow-hidden bg-gray-500/20 transition-all duration-300 md:hidden">
+            <div class="relative h-full w-72 space-y-10 bg-white p-5">
+                <h1 class="">
+                    <span class="text-2xl font-bold text-gray-800 md:text-3xl">COMPANY.</span>
+                    <span class="text-lg font-semibold text-gray-500 md:text-xl">BRAND</span>
+                </h1>
+                <button id="sm-side-menu-close" class="flex items-center gap-3">
+                    <i
+                        class="fi fi-br-cross flex items-center justify-center font-bold text-gray-500 transition-all duration-300 hover:text-gray-700"></i>
+                    <span class="text-lg text-gray-500">Close</span>
+                </button>
+
+                <div class="grid gap-3">
+                    <a href="index.html" class="font-quicksand text-xl font-medium uppercase text-gray-600">HOME</a>
+                    <a href="newarrival.html" class="font-quicksand text-xl font-medium uppercase text-gray-600">NEW
+                        Arravials</a>
+                    <a class="font-quicksand text-xl font-medium uppercase text-gray-600">Men</a>
+                    <a class="font-quicksand text-xl font-medium uppercase text-gray-600">Women</a>
+                    <div
+                        class="side-menu-link cursor-pointer font-quicksand text-xl font-medium uppercase text-gray-600">
+                        <a class="flex items-center justify-between">
+                            <span>Kids</span>
+                            <span><i class="fi fi-rr-angle-right flex items-center justify-center"></i></span>
+                        </a>
+
+                        <div
+                            class="side-menu-sub-link absolute inset-0 -z-10 space-y-10 bg-white opacity-0 transition-all duration-300">
+                            <button class="side-menu-sub-link-close-btn flex items-center gap-3">
+                                <i
+                                    class="fi fi-rr-angle-left flex items-center justify-center font-bold text-gray-500 transition-all duration-300 hover:text-gray-700"></i>
+                                <span class="text-lg text-gray-500">Back</span>
+                            </button>
+                            <div class="grid gap-3">
+                                <a class="font-quicksand text-xl font-medium uppercase text-gray-600">Boy</a>
+                                <a class="font-quicksand text-xl font-medium uppercase text-gray-600">Girl</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Side Bar -->
+    </header>
+    <!-- End Header -->
+
+    <!-- Start New Arrivals -->
+    <section class="container mx-auto">
+        <div class="my-5">
+            <h1 class="text-center text-4xl font-semibold tracking-widest">
+                New Arrivals
+            </h1>
+        </div>
+
+        <div class="mb-5 grid place-items-center gap-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+            <!-- Card -->
+            <div class="group relative w-[448px] cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/2.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="group relative w-[448px] cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/3.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="group relative w-[448px] cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/7.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="group relative max-w-md cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/2.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="group relative max-w-md cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/3.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="group relative max-w-md cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/7.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="group relative max-w-md cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/2.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="group relative max-w-md cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/3.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="group relative max-w-md cursor-pointer overflow-hidden rounded-xl border shadow-xl">
+                <!-- Card Image -->
+                <img src="../images/7.jpg" class="h-72 w-full object-contain" />
+
+                <!-- Card Body -->
+                <div class="space-y-1 p-5">
+                    <h5 class="text-lg font-medium tracking-wide">
+                        FLEXIBLE MEN BROWN LOAFER
+                    </h5>
+                    <p class="text-sm">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit.
+                    </p>
+                    <div class="flex items-center gap-1 text-gray-800">
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star flex items-center justify-center"></i>
+                        <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                        <span class="text-sm">(4.5k)</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="font-bold text-gray-800">$560</p>
+                        <p class="font-bold text-gray-400 line-through">
+                            $700
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="absolute flex h-full w-full translate-y-full items-center justify-center bg-gray-700/35 transition-all duration-500 group-hover:-translate-y-full">
+                    <div class="flex gap-3">
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">View
+                            Details</a>
+                        <a
+                            class="rounded-lg border-2 border-white px-4 py-2 font-bold text-white transition-all duration-300 hover:bg-white hover:text-gray-800">Buy
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End New Arrivals -->
+</body>
+
+</html>
