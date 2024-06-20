@@ -7,7 +7,7 @@
     "tailwindcss": "^3.4.3"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "npx tailwindcss -i ./public/src/input.css -o ./public/src/output.css --watch"
   },
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.2.1"
