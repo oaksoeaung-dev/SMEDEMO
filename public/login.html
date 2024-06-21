@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-straight/css/uicons-thin-straight.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+
+    <link href="./src/output.css" rel="stylesheet" type="text/css" />
+    <link href="./src/custom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center flex-col h-screen">
+    <div id="container" class="container bg-white rounded-3xl shadow-lg relative overflow-hidden w-[900px] max-w-full min-h-[600px]">
+
+        <!-- Sign Up -->
+        <div class="absolute top-0 h-full transition-all duration-700 ease-in-out sign-up left-0 w-1/2 opacity-0 z-[1]">
+            <form class="bg-white flex items-center justify-center flex-col px-2 md:px-10 h-full">
+                <h1 class="text-3xl my-5 font-semibold text-gray-800">Create Account</h1>
+
+                <!-- Name -->
+                <div class="relative w-full my-4">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-sr-user flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" id="email-address-icon" class="bg-gray-50 border shadow-lg border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 outline-none" placeholder="Name">
+                </div>
+
+                <!-- Email -->
+                <div class="relative w-full my-4">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-sr-envelope flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" id="email-address-icon" class="bg-gray-50 border shadow-lg border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 outline-none" placeholder="Email">
+                </div>
+
+                <!-- Password -->
+                <div class="relative w-full my-4">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-sr-lock flex items-center justify-center"></i>
+                    </div>
+                    <input type="password" id="email-address-icon" class="bg-gray-50 border shadow-lg border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 outline-none" placeholder="Password">
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="relative w-full my-4">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-sr-lock flex items-center justify-center"></i>
+                    </div>
+                    <input type="password" id="email-address-icon" class="bg-gray-50 border shadow-lg border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 outline-none" placeholder="Confirm password">
+                </div>
+
+                <button class="bg-gray-800 text-gray-50 text-xs w-full py-2.5 border border-gray-800 rounded-lg font-semibold tracking-[0.5px] uppercase mt-3 cursor-pointer flex items-center justify-center gap-2 hover:gap-4 transition-all duration-300"><span class="text-gray-50">Sign Up</span><i class="fi fi-sr-angle-right flex items-center justify-center text-gray-50"></i></button>
+            </form>
+        </div>
+
+        <!-- Sign In -->
+        <div class="absolute top-0 h-full transition-all duration-700 ease-in-out sign-in left-0 w-1/2 z-[2]">
+            <form class="bg-white flex items-center justify-center flex-col px-2 md:px-10 h-full">
+                <h1 class="text-3xl my-5 font-semibold text-gray-800">Sign In</h1>
+
+                <!-- Email -->
+                <div class="relative w-full my-4">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-sr-envelope flex items-center justify-center"></i>
+                    </div>
+                    <input type="text" id="email-address-icon" class="bg-gray-50 border shadow-lg border-gray-300 text-gray-900 rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 outline-none text-xs" placeholder="Email">
+                </div>
+
+                <!-- Password -->
+                <div class="relative w-full my-4">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                        <i class="fi fi-sr-lock flex items-center justify-center"></i>
+                    </div>
+                    <input type="password" id="email-address-icon" class="bg-gray-50 border shadow-lg border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 outline-none" placeholder="Password">
+                </div>
+                <a href="#" class="text-gray-800 text-sm mt-4 mb-3 hover:underline decoration-gray-800">Forgot your password?</a>
+                <button class="bg-gray-800 text-gray-50 text-xs w-full py-2.5 border border-gray-800 rounded-lg font-semibold tracking-[0.5px] uppercase mt-3 cursor-pointer flex items-center justify-center gap-2 hover:gap-4 transition-all duration-300"><span class="text-gray-50">Sign In</span><i class="fi fi-sr-angle-right flex items-center justify-center text-gray-50"></i></button>
+            </form>
+        </div>
+
+        <!-- Toggle container -->
+        <div class="toggle-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition-all duration-700 rounded-tl-[150px] rounded-bl-[100px] z-[1000]">
+            <!-- Toggle -->
+            <div class="toggle bg-gray-800 h-full text-gray-50 relative -left-full w-[200%] translate-x-0 transition-all duration-700 ease-in-out">
+                <!-- Toggle panel toggle left -->
+                <div class="toggle-left absolute w-1/2 h-full flex items-center justify-center flex-col px-7 text-center top-0 -translate-x-[200%] transition-all duration-700">
+                    <h1 class="text-gray-50 text-3xl font-semibold">Welcome Back!</h1>
+                    <p class="text-sm leading-5 tracking-[0.3px] my-5 text-gray-50">Already have an account? Sign in here.</p>
+                    <button class="text-gray-50 text-xs px-11 py-3 border border-white rounded-lg font-semibold tracking-[0.5px] uppercase mt-3 cursor-pointer" id="login">Sign In</button>
+                </div>
+
+                <!-- Toggle panel toggle right -->
+                <div class="toggle-rigth absolute w-1/2 h-full flex items-center justify-center flex-col px-7 text-center top-0 translate-x-0 transition-all duration-700 right-0">
+                    <h1 class="text-gray-50 text-3xl font-semibold">Hello!</h1>
+                    <p class="text-sm leading-5 tracking-[0.3px] my-5 text-gray-50">Register here if you don't have an account.</p>
+                    <button class="text-gray-50 text-xs px-11 py-3 border border-white rounded-lg font-semibold tracking-[0.5px] uppercase mt-3 cursor-pointer" id="register">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/signinsignup.js" type="text/javascript"></script>
+</body>
+
+</html>
+
+<!-- <div class="relative my-3">
+    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+        <i class="fi fi-sr-envelope flex items-center justify-center"></i>
+    </div>
+    <input type="text" id="email-address-icon" class="bg-gray-50 border shadow-lg border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 outline-none" placeholder="Username">
+</div>
+
+<div class="relative my-3">
+    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+        <i class="fi fi-sr-lock flex items-center justify-center"></i>
+    </div>
+    <input type="password" id="email-address-icon" class="bg-gray-50 border shadow-lg border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-500 focus:border-gray-500 block w-full ps-10 p-2.5 outline-none" placeholder="Password">
+</div> -->
