@@ -1,0 +1,406 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css" />
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css" />
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-straight/css/uicons-thin-straight.css" />
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-solid-rounded/css/uicons-solid-rounded.css" />
+        <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-solid-straight/css/uicons-solid-straight.css" />
+
+        <link href="./src/output.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body class="">
+        <!-- Start Header -->
+        <header class="bg-white transition-all duration-300">
+            <div class="grid grid-cols-2 gap-3 p-5 md:grid-cols-3 md:gap-0 lg:grid-cols-3">
+                <!-- Start Brand -->
+                <div class="">
+                    <h1 class="">
+                        <span class="text-2xl font-bold text-gray-800 md:text-3xl">SME</span>
+                        <span class="text-lg font-semibold text-gray-500 md:text-xl">Myanmar</span>
+                    </h1>
+                </div>
+                <!-- End Brand -->
+
+                <!-- Start Search Box For LG -->
+                <div class="hidden place-self-center md:block">
+                    <form class="md:max-w-md lg:w-[400px]">
+                        <label for="default-search" class="sr-only mb-2 text-sm font-medium text-gray-900">Search</label>
+                        <div class="relative">
+                            <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
+                                <svg class="h-4 w-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="search" id="default-search" class="block w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-2 ps-10 text-sm text-gray-900 focus:border-gray-500 focus:outline-none focus:ring-gray-500" placeholder="Search" required />
+                        </div>
+                    </form>
+                </div>
+                <!-- End Search Box For LG -->
+
+                <!-- Start Search Box For SM -->
+                <div class="relative col-span-2 row-start-2 md:hidden">
+                    <div class="flex justify-between">
+                        <button id="sm-side-menu">
+                            <i class="fi fi-br-bars-sort font-bold text-gray-500 transition-all duration-300 hover:text-gray-800"></i>
+                        </button>
+                        <button id="sm-search-btn">
+                            <i class="fi fi-rs-search font-bold text-gray-700 transition-all duration-300 hover:text-gray-800"></i>
+                        </button>
+                    </div>
+                    <div id="sm-search" class="absolute inset-0 top-0 -z-20 flex items-center gap-3 opacity-0 transition-all duration-300">
+                        <form class="w-full">
+                            <label for="default-search" class="sr-only mb-2 text-sm font-medium text-gray-900">Search</label>
+                            <div class="relative">
+                                <div class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3">
+                                    <svg class="h-4 w-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                    </svg>
+                                </div>
+                                <input type="search" id="default-search" class="block w-full rounded-lg border border-gray-300 bg-gray-100 px-4 py-2 ps-10 text-sm text-gray-900 focus:border-gray-500 focus:outline-none focus:ring-gray-500" placeholder="Search" required />
+                            </div>
+                        </form>
+                        <button id="sm-search-btn-close" class="bg-white">
+                            <i class="fi fi-rs-cross font-bold text-gray-700 transition-all duration-300 hover:text-gray-800"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- End Search Box For SM -->
+
+                <!-- Start Social,Cart,Profile -->
+                <div class="flex items-center gap-5 place-self-end">
+                    <div>
+                        <a class="flex text-2xl text-gray-800"><i class="fi fi-brands-facebook flex items-center justify-center"></i></a>
+                    </div>
+                    <div>
+                        <a class="flex text-2xl text-gray-800"><i class="fi fi-tr-cart-minus flex items-center justify-center"></i></a>
+                    </div>
+                    <div>
+                        <a class="block h-9 w-9 rounded-full border border-gray-900 p-2"><img src="./images/user.png" class="" /></a>
+                    </div>
+                </div>
+                <!-- End Social,Cart,Profile -->
+            </div>
+
+            <!-- Start Nav Bar -->
+            <nav class="hidden gap-5 px-5 py-2 md:flex">
+                <a href="index.html" class="relative font-quicksand font-semibold text-gray-700 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-full after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">Home</a>
+                <a href="newarrival.html" class="relative font-quicksand font-semibold text-gray-600 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-0 after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">New Arravials</a>
+                <a href="#" class="relative font-quicksand font-semibold text-gray-600 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-0 after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">Men</a>
+                <a href="#" class="relative font-quicksand font-semibold text-gray-600 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-0 after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">Women</a>
+
+                <div class="group relative font-quicksand font-semibold text-gray-600 after:absolute after:-bottom-[5px] after:left-0 after:h-[3px] after:w-0 after:rounded-xl after:bg-gray-700 after:duration-300 after:content-[''] hover:text-gray-700 hover:after:w-full">
+                    <a href="#">Kids</a>
+                    <div class="absolute left-0 right-0 top-full z-20 mt-3 flex w-32 origin-top -translate-x-1/2 scale-y-0 flex-col gap-3 rounded-lg bg-gray-50 p-3 shadow-md duration-300 group-hover:scale-y-100">
+                        <a href="#">Boy</a>
+                        <a href="#">Girl</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Nav Bar -->
+
+            <!-- Start Side Bar -->
+            <div id="side-menu" class="absolute inset-0 z-50 block h-screen w-0 overflow-hidden bg-gray-500/20 transition-all duration-300 md:hidden">
+                <div class="relative h-full w-72 space-y-10 bg-white p-5">
+                    <h1 class="">
+                        <span class="text-2xl font-bold text-gray-800 md:text-3xl">COMPANY.</span>
+                        <span class="text-lg font-semibold text-gray-500 md:text-xl">BRAND</span>
+                    </h1>
+                    <button id="sm-side-menu-close" class="flex items-center gap-3">
+                        <i class="fi fi-br-cross flex items-center justify-center font-bold text-gray-500 transition-all duration-300 hover:text-gray-700"></i>
+                        <span class="text-lg text-gray-500">Close</span>
+                    </button>
+
+                    <div class="grid gap-3">
+                        <a href="index.html" class="font-quicksand text-xl font-medium uppercase text-gray-600">HOME</a>
+                        <a href="newarrival.html" class="font-quicksand text-xl font-medium uppercase text-gray-600">NEW Arravials</a>
+                        <a class="font-quicksand text-xl font-medium uppercase text-gray-600">Men</a>
+                        <a class="font-quicksand text-xl font-medium uppercase text-gray-600">Women</a>
+                        <div class="side-menu-link cursor-pointer font-quicksand text-xl font-medium uppercase text-gray-600">
+                            <a class="flex items-center justify-between">
+                                <span>Kids</span>
+                                <span><i class="fi fi-rr-angle-right flex items-center justify-center"></i></span>
+                            </a>
+
+                            <div class="side-menu-sub-link absolute inset-0 -z-10 space-y-10 bg-white opacity-0 transition-all duration-300">
+                                <button class="side-menu-sub-link-close-btn flex items-center gap-3">
+                                    <i class="fi fi-rr-angle-left flex items-center justify-center font-bold text-gray-500 transition-all duration-300 hover:text-gray-700"></i>
+                                    <span class="text-lg text-gray-500">Back</span>
+                                </button>
+                                <div class="grid gap-3">
+                                    <a class="font-quicksand text-xl font-medium uppercase text-gray-600">Boy</a>
+                                    <a class="font-quicksand text-xl font-medium uppercase text-gray-600">Girl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Side Bar -->
+        </header>
+        <!-- End Header -->
+
+        <!-- Start Detail -->
+        <div class="grid gap-5 p-5 md:grid-cols-2">
+            <!-- Start detail image -->
+            <div class="grid">
+                <div>
+                    <img src="./images/side1.webp" class="mb-5 h-[450px] w-full rounded-lg bg-gray-100 object-contain shadow-md" id="display-detail-image" />
+                </div>
+                <div style="transform: translateX(0px)" class="no-scrollbar my-5 flex w-full gap-5 overflow-x-auto" id="test">
+                    <img src="./images/side1.webp" class="detail-image h-full max-w-[150px] cursor-pointer rounded-lg bg-gray-100 object-contain" />
+                    <img src="./images/side2.webp" class="detail-image h-full max-w-[150px] cursor-pointer rounded-lg bg-gray-100 object-contain" />
+                    <img src="./images/side3.webp" class="detail-image h-full max-w-[150px] cursor-pointer rounded-lg bg-gray-100 object-contain" />
+                    <img src="./images/side4.webp" class="detail-image h-full max-w-[150px] cursor-pointer rounded-lg bg-gray-100 object-contain" />
+                </div>
+            </div>
+            <!-- End detail image -->
+
+            <!-- Start Product Detail -->
+            <div class="lg:px-10">
+                <h1 class="mb-2 text-3xl font-semibold">Shoes Reebok Zig Kinetica 3</h1>
+                <div class="flex items-center gap-2 text-xs text-gray-800">
+                    <i class="fi fi-sr-star flex items-center justify-center"></i>
+                    <i class="fi fi-sr-star flex items-center justify-center"></i>
+                    <i class="fi fi-sr-star flex items-center justify-center"></i>
+                    <i class="fi fi-sr-star flex items-center justify-center"></i>
+                    <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center"></i>
+                    <span class="text-sm">43 reviews</span>
+                </div>
+                <div class="my-6">
+                    <p class="text-3xl font-bold">$199.00</p>
+                </div>
+                <div class="my-3 space-y-2">
+                    <h5 class="text-sm font-bold">Color</h5>
+                    <div class="flex gap-3">
+                        <div>
+                            <input type="radio" id="blue" name="color" value="blue" class="peer hidden" />
+                            <label for="blue" class="inline-flex w-full cursor-pointer items-center justify-between rounded-lg border border-gray-200 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-600 peer-checked:text-gray-600">
+                                <img src="./images/2.jpg" class="h-[55px] w-[45px] object-contain" />
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="green" name="color" value="green" class="peer hidden" required />
+                            <label for="green" class="inline-flex w-full cursor-pointer items-center justify-between rounded-lg border border-gray-200 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-600 peer-checked:text-gray-600">
+                                <img src="./images/3.jpg" class="h-[55px] w-[45px] object-contain" />
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="red" name="color" value="red" class="peer hidden" required />
+                            <label for="red" class="inline-flex w-full cursor-pointer items-center justify-between rounded-lg border border-gray-200 bg-white text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-600 peer-checked:text-gray-600">
+                                <img src="./images/7.jpg" class="h-[55px] w-[45px] object-contain" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3 space-y-2">
+                    <h5 class="text-sm font-bold">Size</h5>
+                    <div class="flex flex-wrap gap-3">
+                        <div>
+                            <input type="radio" id="40" name="size" value="40" class="peer hidden" />
+                            <label for="40" class="inline-flex h-[30px] w-[60px] cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-800 peer-checked:bg-gray-800 peer-checked:text-gray-50"> 40 </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="40.5" name="size" value="40.5" class="peer hidden" />
+                            <label for="40.5" class="inline-flex h-[30px] w-[60px] cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-800 peer-checked:bg-gray-800 peer-checked:text-gray-50"> 40.5 </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="50" name="size" value="50" class="peer hidden" />
+                            <label for="50" class="inline-flex h-[30px] w-[60px] cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-800 peer-checked:bg-gray-800 peer-checked:text-gray-50"> 50 </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="50.5" name="size" value="50.5" class="peer hidden" />
+                            <label for="50.5" class="inline-flex h-[30px] w-[60px] cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-800 peer-checked:bg-gray-800 peer-checked:text-gray-50"> 50.5 </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="60" name="size" value="60" class="peer hidden" />
+                            <label for="60" class="inline-flex h-[30px] w-[60px] cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-800 peer-checked:bg-gray-800 peer-checked:text-gray-50"> 60 </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="62" name="size" value="62" class="peer hidden" />
+                            <label for="62" class="inline-flex h-[30px] w-[60px] cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-800 peer-checked:bg-gray-800 peer-checked:text-gray-50"> 62 </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="63" name="size" value="63" class="peer hidden" />
+                            <label for="63" class="inline-flex h-[30px] w-[60px] cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-800 peer-checked:bg-gray-800 peer-checked:text-gray-50"> 63 </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="65" name="size" value="65" class="peer hidden" />
+                            <label for="65" class="inline-flex h-[30px] w-[60px] cursor-pointer items-center justify-center rounded-lg border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 hover:text-gray-600 peer-checked:border-gray-800 peer-checked:bg-gray-800 peer-checked:text-gray-50"> 65 </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-3 space-y-2">
+                    <h5 class="text-sm font-bold">Quantity</h5>
+                    <div class="flex items-center">
+                        <button class="border px-3 text-lg active:bg-gray-100" id="minus" type="button">-</button>
+                        <p class="px-3 text-xs" id="count">1</p>
+                        <button class="border px-3 text-lg active:bg-gray-100" id="plus" type="button">+</button>
+                    </div>
+                </div>
+
+                <div class="mb-3 mt-5 flex w-full items-center gap-5">
+                    <a href="#" class="flex h-[45px] w-4/5 items-center justify-center gap-3 rounded-lg bg-gray-800 text-sm"><i class="fi fi-rr-shopping-bag flex items-center justify-center text-gray-50"></i><span class="text-gray-50">Add to cart</span></a>
+                    <a href="" class="flex h-[45px] w-[45px] items-center justify-center rounded-lg bg-gray-200 font-bold"><i class="fi fi-rr-heart flex items-center justify-center"></i></a>
+                </div>
+
+                <div class="flex gap-3 font-semibold">
+                    <i class="fi fi-rr-truck-check flex items-center justify-center text-sm"></i>
+                    <span class="text-sm">Free delivery on orders over $30.0</span>
+                </div>
+            </div>
+            <!-- End Product Detail -->
+
+            <div class="">
+                <!-- Tab box -->
+                <div class="flex w-full gap-5">
+                    <button class="tab-btn text-2xl font-bold text-gray-800">Details</button>
+                    <button class="tab-btn text-2xl font-bold text-gray-300">Reviews</button>
+                    <button class="tab-btn text-2xl font-bold text-gray-300">Comments</button>
+                </div>
+
+                <!-- Content box -->
+                <div class="mt-5 max-h-[500px] overflow-auto">
+                    <div class="tab-content py-2">
+                        <p class="text-justify leading-8">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum necessitatibus aspernatur commodi nemo illo, cum consequatur a doloribus culpa numquam aut voluptatem explicabo quam fugiat quasi quos non laboriosam neque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio qui reprehenderit non et voluptatem harum minima voluptas! Facere, odio? Repudiandae sed rem omnis optio fugiat quis dignissimos! Esse, facilis nobis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, officia. Blanditiis quibusdam debitis quos ipsum, eum facilis perspiciatis! Tenetur perspiciatis ipsam porro asperiores aliquam eligendi at, quidem dolorum inventore quas.</p>
+                    </div>
+                    <div class="tab-content hidden">
+                        <div class="flex gap-3 border-b py-6">
+                            <img src="./images/man.png" class="h-16 w-16 flex-none overflow-hidden rounded-full border border-gray-800 object-contain p-1" />
+                            <div class="space-y-2">
+                                <div class="flex gap-2">
+                                    <p class="font-bold">John Wick</p>
+                                    <span class="font-bold text-gray-400">2 days ago</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-gray-800">
+                                    <i class="fi fi-sr-star flex items-center justify-center text-xs"></i>
+                                    <i class="fi fi-sr-star flex items-center justify-center text-xs"></i>
+                                    <i class="fi fi-sr-star flex items-center justify-center text-xs"></i>
+                                    <i class="fi fi-sr-star flex items-center justify-center text-xs"></i>
+                                    <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illo quam iure fugiat. Eos ratione, voluptates molestiae distinctio quas aliquam saepe ab dolore dolores beatae iusto a tempore commodi rerum.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3 border-b py-6">
+                            <img src="./images/man.png" class="h-16 w-16 flex-none overflow-hidden rounded-full border border-gray-800 object-contain p-1" />
+                            <div class="space-y-2">
+                                <div class="flex gap-2">
+                                    <p class="font-bold">Angelena</p>
+                                    <span class="font-bold text-gray-400">2 days ago</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-gray-800">
+                                    <i class="fi fi-sr-star flex items-center justify-center text-xs"></i>
+                                    <i class="fi fi-sr-star flex items-center justify-center text-xs"></i>
+                                    <i class="fi fi-sr-star flex items-center justify-center text-xs"></i>
+                                    <i class="fi fi-sr-star flex items-center justify-center text-xs"></i>
+                                    <i class="fi fi-sr-star-sharp-half-stroke flex items-center justify-center text-xs"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illo quam iure fugiat. Eos ratione, voluptates molestiae distinctio quas aliquam saepe ab dolore dolores beatae iusto a tempore commodi rerum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content relative hidden">
+                        <div class="mb-2 flex gap-3 border-b py-6">
+                            <img src="./images/man.png" class="h-16 w-16 flex-none overflow-hidden rounded-full border border-gray-800 object-contain p-1" />
+                            <div class="space-y-2">
+                                <div class="flex gap-2">
+                                    <p class="font-bold">Angelena</p>
+                                    <span class="font-bold text-gray-400">2 days ago</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique illo quam iure fugiat. Eos ratione, voluptates molestiae distinctio quas aliquam saepe ab dolore dolores beatae iusto a tempore commodi rerum.</p>
+                                </div>
+                                <div class="flex gap-5">
+                                    <span class="flex gap-3"><i class="fi fi-rr-social-network flex items-center justify-center"></i><span class="text-xs">20</span></span
+                                    ><span class="flex gap-3"><i class="fi fi-rr-hand flex items-center justify-center"></i><span class="text-xs">3</span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sticky bottom-0 z-10 w-full">
+                            <div class="relative">
+                                <input type="text" class="w-full rounded-lg border border-gray-300 py-2.5 pl-2 pr-10 text-sm outline-none focus:border-gray-600" />
+                                <button class="absolute right-4 top-1/2 flex -translate-y-1/2 items-center justify-center"><i class="fi fi-rr-paper-plane flex items-center justify-center"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Detail -->
+
+        <script type="text/javascript">
+            document.addEventListener("DOMLoaded", () => {
+                const container = document.getElementById("test");
+
+                container.addEventListener("wheel", (e) => {
+                    e.preventDefault(); // Prevent the default vertical scroll behavior
+                    container.scrollLeft += e.deltaY; // Scroll horizontally
+                });
+            });
+
+            // For count
+            let minus = document.getElementById("minus");
+            let plus = document.getElementById("plus");
+            let count = +document.getElementById("count").innerHTML;
+
+            minus.addEventListener("click", (e) => {
+                if (count == 0) {
+                    e.preventDefault();
+                } else {
+                    count--;
+                    document.getElementById("count").innerHTML = count;
+                }
+            });
+
+            plus.addEventListener("click", (e) => {
+                count++;
+                document.getElementById("count").innerHTML = count;
+            });
+
+            // For tab
+            let tabs = document.querySelectorAll(".tab-btn");
+            let tabContents = document.querySelectorAll(".tab-content");
+            let selectedTab = tabs[0];
+            let selectedTabContent = tabContents[0];
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener("click", (e) => {
+                    if (selectedTab) {
+                        selectedTab.classList.remove("text-gray-800");
+                        selectedTab.classList.add("text-gray-300");
+                    }
+
+                    if (selectedTabContent) {
+                        selectedTabContent.classList.add("hidden");
+                    }
+
+                    selectedTab = tab;
+                    selectedTab.classList.remove("text-gray-300");
+                    selectedTab.classList.add("text-gray-800");
+
+                    selectedTabContent = tabContents[index];
+                    selectedTabContent.classList.remove("hidden");
+                });
+            });
+        </script>
+
+        <script src="./js/showimage.js" type="text/javascript"></script>
+    </body>
+</html>
